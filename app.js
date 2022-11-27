@@ -21,6 +21,9 @@ app.get("/",(req,res)=>{
   res.render("index");
 });
 
+const task3Handler = require('./routes/task3');
+app.get("/task3",task3Handler);
+
 app.listen(app.get("port"),()=>{
   console.log(`App listening on http://localhost:${port}`);
 });
