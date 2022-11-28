@@ -7,7 +7,6 @@ function task3Handler(req, res) {
   
   if(queryFilter && !isNaN(queryFilter)){
     filteredProducts = products.filter((item)=>{
-      console.log(item.category === queryFilter)
       return (item.category === queryFilter);
     })
   }else{
