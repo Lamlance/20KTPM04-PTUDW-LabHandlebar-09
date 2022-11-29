@@ -14,7 +14,9 @@ function task3Handler(req, res) {
   }
 
   res.render("task3",{
-    products: filteredProducts
+    products: filteredProducts,
+    title:"TV Sales",
+    author:"Nguyễn Xuân Hoàng Lâm - 20127047"
   });
 }
 
