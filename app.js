@@ -44,6 +44,11 @@ app.get("/task1", (req, res) => {
 	res.locals.emotions = emotions;
 	res.locals.quotePath = quotePath;
 
+app.get("/",(req, res)=>{
+  res.render("index");
+});
+
+app.use('/task2', require('./routes/task2Route'))
 	res.render("task1");
 });
 
