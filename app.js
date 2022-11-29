@@ -52,6 +52,9 @@ app.get("/task2", (req, res) => {
 	res.render("task2");
 });
 
+const task3Handler = require('./routes/task3');
+app.get("/task3",task3Handler);
+
 app.get("/task3", (req, res) => {
 	res.locals.title = "TV Sales";
 	res.render("task3");
