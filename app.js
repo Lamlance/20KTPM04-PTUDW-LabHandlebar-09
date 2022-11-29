@@ -17,9 +17,11 @@ app.engine("hbs",expressHandlebars.engine({
 }));
 app.set("view engine","hbs");
 
-app.get("/",(req,res)=>{
+app.get("/",(req, res)=>{
   res.render("index");
 });
+
+app.use('/task2', require('./routes/task2Route'))
 
 app.listen(app.get("port"),()=>{
   console.log(`App listening on http://localhost:${port}`);
