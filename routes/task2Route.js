@@ -5,3 +5,5 @@ const controller = require('../controllers/task2Controller');
 route.get('/', (req, res) => {
   controller.show(req, res);
 });
+
+module.exports = route;

@@ -44,18 +44,14 @@ app.get("/task1", (req, res) => {
 	res.locals.emotions = emotions;
 	res.locals.quotePath = quotePath;
 
+	res.render("task1");
+});
+
 app.get("/",(req, res)=>{
   res.render("index");
 });
 
-app.use('/task2', require('./routes/task2Route'))
-	res.render("task1");
-});
-
-app.get("/task2", (req, res) => {
-	res.locals.title = "Jars Saving";
-	res.render("task2");
-});
+app.use("/task2", require("./routes/task2Route") );
 
 const task3Handler = require('./routes/task3');
 app.get("/task3",task3Handler);
