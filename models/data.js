@@ -33,6 +33,7 @@ const categories = [
     title: "Panasonic", id: 3
   }
 ];
+
 const products = [
   {
     title: "TIVI QLED SAMSUNG QA55Q7FAMKXXV",
