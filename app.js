@@ -21,11 +21,6 @@ app.engine(
 
 app.set("view engine", "hbs");
 
-app.get("/", (req, res) => {
-	res.locals.title = "Jeopardize Contest";
-	res.render("index");
-});
-
 app.get("/task1", (req, res) => {
 	let title = req.query.title;
 	let { emotions } = require("./models/data");
@@ -48,18 +43,16 @@ app.get("/task1", (req, res) => {
 });
 
 app.get("/",(req, res)=>{
-  res.render("index");
+  res.render("index",{
+		title:"20KTPM04",
+    author:"Nhom9"
+	});
 });
 
 app.use("/task2", require("./routes/task2Route") );
 
 const task3Handler = require('./routes/task3');
 app.get("/task3",task3Handler);
-
-app.get("/task3", (req, res) => {
-	res.locals.title = "TV Sales";
-	res.render("task3");
-});
 
 app.listen(app.get("port"), () => {
 	console.log(`App listening on http://localhost:${port}`);
